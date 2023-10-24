@@ -1,0 +1,60 @@
+#banner
+{
+    background-size: cover;
+    background-image: url(https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1696284215207-home-slidercyberweek-moda.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+
+}
+.card {
+    margin: 10%;
+    justify-content: flex-start;
+    text-align: start;
+    padding: 2%;
+    width: 220px;
+    height:350px;
+    grid-column-gap: 100px;
+
+}
+
+img {
+    margin-left: -54%;
+    scale: 65%;
+
+}
+mat-card-title {
+    font-size: 1px;
+}
+
+mat-card-subtitle {
+    color: black;
+    font-size: 15px;
+}
+
+#mm {
+    color: green;
+    font-size: 12px;
+}
+
+#fila{
+width: 100%;
+}
+
+h5{
+    margin-left: 24.6%;
+    margin-top: 0.5%;
+    margin-bottom: 0.8%;
+    color: rgba(76, 83, 83, 0.836);
+}
+#nume {
+    border: 0;
+    align-items: center;
+}
+.cart{
+    background-color: rgb(255, 255, 255);
+    margin-right:-20%;
+    font-size: normal;
+}

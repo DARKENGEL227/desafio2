@@ -1,0 +1,59 @@
+
+<app-header></app-header>
+<!-- <div id="banner">
+
+</div> -->
+<app-carousel></app-carousel>
+<h5>Lista de Productos relacionados con tu visita de oficina</h5>
+<div class="container text-center" >
+  <div class="row" id="fila">
+    <div class="col-2 m-3" *ngFor="let cont of  contenido  | slice:0:5; let i = index">
+      <mat-card id="{{cont.id}}" routerLink="/des/{{cont.id}}" routerLinkActive="active" ariaCurrentWhenActive="page" class="card"   (click)="lok(cont)" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <img mat-card-xl-image src="{{cont.imagenUrl}}" alt="">
+
+        </mat-card-header>
+        <mat-card-content>
+
+        </mat-card-content>
+        
+        <mat-card-subtitle > <h6 id="dato">{{cont.nombre}}</h6>  </mat-card-subtitle>
+        
+      </mat-card>
+    </div>
+  </div>
+</div>
+<h4>Datos del Producto seleccionado</h4>
+<ng-container *ngIf="ver"   [ngStyle]="{'font-size': ver.precio > 100 ? 'x-large' : 'normal'}">
+  <!-- <h1 [ngClass]="{cart:ver}">Datos del Prodcuto </h1> -->
+  <div class ="pr" [ngStyle]="{'font-size': ver.precio > 100 ? 'x-large' : 'normal'}">
+    <h1 [ngClass]="{cart:ver}" > {{ver.nombre}}</h1>
+    <span [ngClass]="{cart:ver}" ><b>{{ver.precio}} $ </b></span>
+    <p id="mm" [ngClass]="{cart:ver}" >{{ver.tipoEnvio}}</p>
+  </div>
+ 
+
+</ng-container>
+<h5>Lista de Productos relacionados con tu visita de hogar</h5>
+<div class="container text-center" >
+  <div class="row" id="fila">
+    <div class="col-2 m-3" *ngFor="let cont2 of  contenido  | slice:5:10; let i = index">
+      <mat-card id="{{cont2.id}}" routerLink="/des/{{cont2.id}}" routerLinkActive="active" ariaCurrentWhenActive="page" class="card"  class="card"  (click)="lok2(cont2)">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <img mat-card-xl-image src="{{cont2.imagenUrl}}" alt=""  >
+
+
+        </mat-card-header>
+        <mat-card-subtitle > <h6 id="dato">{{cont2.nombre}}</h6>  </mat-card-subtitle>
+      </mat-card>
+    </div>
+    <h4>Datos del Producto seleccionado</h4>
+    <ng-container *ngIf="ver2"  >
+      <div class ="pr" [ngStyle]="{'font-size': ver.precio > 100 ? 'x-large' : 'normal'}">
+      <h1 [ngClass]="{cart:ver2}" > {{ver2.nombre}}</h1>
+       <span [ngClass]="{cart:ver2}">{{ver2.precio}} $ </span>
+       <p [ngClass]="{cart:ver2}" id="mm">{{ver2.tipoEnvio}}</p>
+      </div>
+     </ng-container>
